@@ -1,9 +1,9 @@
 name: test
 on:
   push:
-    branches: ["next-js-migration"]
+    branches: ["next-js-migration", "test-runner"]
   pull_request:
-    branches: ["next-js-migration"]
+    branches: ["next-js-migration", "test-runner"]
 
 jobs:
   run-jest-tests:
