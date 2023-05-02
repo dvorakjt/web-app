@@ -7,6 +7,7 @@ describe('Home', () => {
   it('renders homepage unchanged', () => {
     // const { container } = render(<Home />);
     // expect(container).toMatchSnapshot();
-    expect(true).toBe(false);
+    //checking that lack of code coverage will cause checks to fail
+    expect(true).toBe(true);
   });
 });

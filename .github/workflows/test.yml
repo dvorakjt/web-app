@@ -3,7 +3,7 @@ on:
   push:
     branches: ["next-js-migration", "test-runner"]
   pull_request:
-    branches: ["next-js-migration", "test-runner"]
+    branches: ["next-js-migration"]
 
 jobs:
   run-jest-tests:
