@@ -1,4 +1,4 @@
-import PageContainer from "@/components/page-container";
+import PageContainer from "@/components/utils/page-container";
 import styles from '@/styles/modules/pages/privacy-policy.module.scss';
 
 export default function PrivacyPolicy() {

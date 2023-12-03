@@ -1,16 +1,9 @@
 @use '../../../partials';
 
-.footer_container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .footer {
   background-color: partials.$color-black-8by8;
   padding: 30px;
-  max-width: partials.$page-width-max;
-  min-width: partials.$page-width-min;
+  width: 100%;
 }
 
 .icons {

@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head';
 import { UserContextProvider } from '@/contexts/user-context';
 import Header from '@/components/header/header';
+import AppContainer from '@/components/utils/app-container';
 import Footer from '@/components/footer/footer';
 import '@/styles/main.scss'
 
@@ -13,8 +14,10 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <UserContextProvider> 
         <Header />
-        <Component {...pageProps} />
-        <Footer />
+        <AppContainer>
+          <Component {...pageProps} />
+          <Footer />
+        </AppContainer>
       </UserContextProvider>
     </>
   );

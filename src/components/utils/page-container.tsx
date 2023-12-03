@@ -3,10 +3,8 @@ import styles from "../../styles/modules/components/utils/page-container.module.
 
 export default function PageContainer({children} : PropsWithChildren) {
   return (
-    <div className={styles.outer_container}>
-      <div className={styles.inner_container}>
+    <div className={styles.container}>
         {children}
-      </div>
     </div>
   );
 }
