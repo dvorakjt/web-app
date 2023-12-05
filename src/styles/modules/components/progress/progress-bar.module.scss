@@ -1,0 +1,9 @@
+@use '../../../partials' as *;
+
+.indicator_gradient {
+  fill : $gradient-yellow-teal;
+}
+
+.indicator_gray_25 {
+  fill : transparent;
+}

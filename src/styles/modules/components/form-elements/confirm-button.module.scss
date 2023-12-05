@@ -1,0 +1,5 @@
+@use '../../../partials' as *;
+
+.confirm_btn {
+  @extend .btn_gradient, .btn_lg, .btn_wide;
+}

@@ -1,0 +1,38 @@
+@use '../../../partials' as *;
+
+.input {
+  @extend .b1;
+
+  background-color: transparent;
+
+  border-radius: 0px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid $color-black-text;
+
+  margin: 0;
+  padding: 8px 0 8px 0;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color : transparent;
+  transition: color 250ms linear;
+}
+
+.input[data-focused]::placeholder, .input[data-visited]::placeholder, .input[data-modified]::placeholder {
+  color : $color-smoke;
+}
+
+.input[data-validity="INVALID"], .input[data-validity="ERROR"] {
+  border-color : $color-red-alert;
+}
+
+.input[data-visited][data-validity="VALID"], .input[data-modified][data-validity="VALID"] {
+  border-image-source: $gradient-yellow-teal;
+  border-image-slice: 100 100;
+}

@@ -1,0 +1,15 @@
+@use '../../../partials' as *;
+
+.messages_container {
+  min-height: calc($font-size-xxs + 3px);
+}
+
+.message {
+  font-family: $font-family-lato;
+  font-size : $font-size-xxs;
+  padding-left: 0;
+}
+
+.message[data-validity="INVALID"], .message[data-validity="ERROR"] {
+  color : $color-red-invalid-field-message;
+}

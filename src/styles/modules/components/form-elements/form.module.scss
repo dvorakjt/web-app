@@ -1,0 +1,7 @@
+@use '../../../partials' as *;
+
+.form {
+  display : flex;
+  flex-direction: column;
+  width: $page-width-min;
+}

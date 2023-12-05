@@ -1,0 +1,18 @@
+@use '../../../partials' as *;
+
+.floating_label {
+  @extend .b1; 
+
+  transform-origin: top left;
+  translate : 0 30px;
+  transition: all 250ms ease-in-out;
+
+  cursor: text;
+}
+
+.floating_label[data-focused], .floating_label[data-visited], .floating_label[data-modified] {
+  translate : 0 8px;
+  scale : 0.77;
+
+  cursor: default;
+}

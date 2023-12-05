@@ -1,4 +1,4 @@
-import styles from '@/styles/modules/components/utils/app-container.module.scss';
+import styles from '../../styles/modules/components/utils/app-container.module.scss';
 import { PropsWithChildren } from 'react';
 
 export default function AppContainer({children}:PropsWithChildren) {
