@@ -1,14 +1,12 @@
-import { ProgressPercent } from "../progress-percent";
 import { AnimatedColorStop } from "./animated-color-stop";
-import { LinearGradientIds } from "./constants";
-import { calculateColorStopOffset } from "./util/calculate-gradient-stop";
+import { Colors, LinearGradientIds } from "./constants";
 
 
 export function TransparentGrayGradient() {
   return (
     <linearGradient id={LinearGradientIds.TRANSPARENT_GRAY_GRADIENT_ID} gradientUnits="userSpaceOnUse">
       <AnimatedColorStop color="transparent" />
-      <AnimatedColorStop color="lightgray" />
+      <AnimatedColorStop color={Colors.LIGHT_GRAY} />
     </linearGradient>
   )
 }

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 import { ProgressBar } from '../../components/progress/progress-bar';
-import { ProgressPercent } from '@/components/progress/progress-percent';
+import { ProgressPercent } from '../../components/progress/progress-percent';
 
 const meta : Meta<typeof ProgressBar> = {
   component : ProgressBar,
@@ -20,12 +20,20 @@ function InteractiveProgressBar() {
     return (
       <div style={{display : 'flex', flexDirection : 'column', alignItems : 'center' }}>
         <ProgressBar progressPercent={progress} />
-        <button onClick={() => {
+
+        <button style={{ margin: "10px"}} onClick={() => {
           let updatedProgress = progress + 25;
           if(updatedProgress > 100) updatedProgress = 25;
 
           setProgress(updatedProgress as ProgressPercent);
         }}>Increment Progress</button>
+
+        <button style={{ margin: "10px"}} onClick={() => {
+          let updatedProgress = progress - 25;
+          if(updatedProgress < 25) updatedProgress = 100;
+
+          setProgress(updatedProgress as ProgressPercent);
+        }}>Decrement Progress</button>
       </div>
     )
 }

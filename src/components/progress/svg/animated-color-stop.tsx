@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { ProgressBarContext } from "../progress-bar-context";
 import { NullOrUndefinedContextError } from '../../../errors/null-or-undefined-context-error';
-import { calculateColorStopOffset } from "./util/calculate-gradient-stop";
+import { calculateColorStopOffset } from "./util/calculate-color-stop-offset";
 
 interface AnimatedColorStopProps {
   color : string;
@@ -47,6 +47,7 @@ export function AnimatedColorStop({ color } : AnimatedColorStopProps) {
   }, [state]);
 
   return (
+    state.willAnimate ? 
     <stop 
       offset={state.offset}
       stopColor={color}
@@ -63,5 +64,10 @@ export function AnimatedColorStop({ color } : AnimatedColorStopProps) {
         ref={animateTagRef}
       />
     </stop>
-  )
+    :
+    <stop 
+      offset={state.offset}
+      stopColor={color}
+    ></stop>
+  );
 }
