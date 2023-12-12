@@ -6,7 +6,13 @@ type CheckboxInputProps = Omit<BaseCheckboxInputProps, 'labelClassName' | 'check
 export function CheckboxInput({fieldName, value, labelText} : CheckboxInputProps) {
   return (
     <div className={styles.container}>
-      <BaseCheckboxInput fieldName={fieldName} value={value} labelText={labelText}  labelClassName={styles.label} />
+      <BaseCheckboxInput 
+        fieldName={fieldName} 
+        value={value} 
+        checkboxClassName={styles.checkbox} 
+        labelText={labelText}  
+        labelClassName={styles.label} 
+      />
     </div>
   )
 };
