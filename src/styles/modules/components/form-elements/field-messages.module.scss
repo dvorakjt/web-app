@@ -1,13 +1,14 @@
 @use '../../../partials' as *;
 
 .messages_container {
-  min-height: calc($font-size-xxs + 3px);
+  display: block;
+  min-height: calc($font-size-xxs + 5px);
 }
 
 .message {
   font-family: $font-family-lato;
   font-size : $font-size-xxs;
-  padding-left: 0;
+  padding: 0;
 }
 
 .message[data-validity="INVALID"], .message[data-validity="ERROR"] {

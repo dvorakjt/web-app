@@ -3,6 +3,7 @@
 .floating_label {
   @extend .b1; 
 
+  display: block;
   transform-origin: top left;
   translate : 0 30px;
   transition: all 250ms ease-in-out;

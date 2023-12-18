@@ -5,6 +5,6 @@ type InputProps = PropsWithoutClassName<BaseInputProps>;
 
 export default function Input(props : InputProps) {
   return (
-    <BaseInput {...props} className={styles.input} placeholder='Your name here' />
+    <BaseInput {...props} className={styles.input} />
   );
 }
